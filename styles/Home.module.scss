@@ -3,20 +3,52 @@
 .main {
   background-color: $background-color;
 
-  .title {
-    height: 50vh;
+  .header {
+    height: 100vh;
     position: relative;
+
+    img {
+      opacity: 0.3;
+    }
+
+    .wrapper {
+      position: absolute;
+      bottom: 0;
+      z-index: 1;
+      height: 100%;
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+      margin-left: 2%;
+      margin-bottom: 5%;
+
+      .title {
+        font-size: 3rem;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 1.7rem;
+        margin-bottom: 10px;
+      }
+
+      .subtitle {
+        color: $primary-color;
+        font-size: 1.5rem;
+        letter-spacing: 0.25rem;
+      }
+    }
   }
 
   .content {
     min-height: 50vh;
     padding: 40px 60px;
+    display: flex;
+    align-items: center;
 
     .resources {
       width: 100%;
       display: grid;
       justify-items: center;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       grid-row-gap: 60px;
 
       .card {
@@ -41,7 +73,7 @@
       }
 
       .card.yellow:before {
-        background: $terciary-color;
+        background: $primary-light-color;
       }
 
       .card.blue:before {
@@ -57,28 +89,31 @@
       }
 
       .card:after {
-        content: "Calcule";
+        content: "Capital";
         position: absolute;
-        top: 40%;
-        left: -9%;
-        font-size: 6em;
+        top: 36%;
+        left: -3%;
+        font-size: 5em;
         font-weight: 800;
         font-style: italic;
-        color: rgba(255, 255, 25, 0.05);
+        color: rgba(255, 255, 25, 0.1);
       }
 
       .card.yellow:after {
-        content: "Descubra";
-        color: rgba(249, 250, 48, 0.05);
+        content: "Salário";
+        left: -2%;
+        color: rgba(249, 250, 48, 0.1);
       }
 
       .card.blue:after {
-        content: "Compre";
+        content: "Financie";
+        left: -10%;
         color: rgba(34, 86, 156, 0.15);
       }
 
       .card.white:after {
         content: "Invista";
+        left: 0;
         color: rgba(255, 255, 255, 0.05);
       }
 
@@ -155,6 +190,29 @@
   }
 
   @media only screen and (max-device-width: 640px) {
+    .header {
+      height: 50vh;
+
+      .wrapper {
+        margin-left: 7%;
+        margin-bottom: 10%;
+
+        .title {
+          font-size: 1.5rem;
+          color: white;
+          text-transform: uppercase;
+          letter-spacing: 0.5rem;
+          margin-bottom: 10px;
+        }
+
+        .subtitle {
+          color: $primary-color;
+          font-size: 0.8rem;
+          letter-spacing: 0.25rem;
+        }
+      }
+    }
+
     .content {
       padding: 20px 30px;
 
