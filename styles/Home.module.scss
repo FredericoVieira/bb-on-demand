@@ -82,7 +82,7 @@
         color: rgba(255, 255, 255, 0.05);
       }
 
-      .card .contentBx {
+      .card .cardContent {
         position: absolute;
         bottom: 0;
         width: 100%;
@@ -92,11 +92,11 @@
         z-index: 10;
       }
 
-      .card:hover .contentBx {
+      .card:hover .cardContent {
         height: 160px;
       }
 
-      .card .contentBx h2 {
+      .card .cardContent h2 {
         position: relative;
         font-weight: 600;
         letter-spacing: 1px;
@@ -104,7 +104,7 @@
         margin-bottom: 10px;
       }
 
-      .card .contentBx .size {
+      .card .cardContent .description {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -116,13 +116,13 @@
         padding-bottom: 0;
       }
 
-      .card:hover .contentBx .size {
+      .card:hover .cardContent .description {
         opacity: 1;
         visibility: visible;
         transition-delay: 0.5s;
       }
 
-      .card .contentBx .size h3 {
+      .card .cardContent .description h3 {
         color: #fff;
         font-weight: 300;
         font-size: 14px;
@@ -131,7 +131,7 @@
         margin-bottom: 20px;
       }
 
-      .card .contentBx a {
+      .card .cardContent a {
         display: inline-block;
         padding: 10px 20px;
         background: #fff;
@@ -146,7 +146,7 @@
         margin-top: 0;
       }
 
-      .card:hover .contentBx a {
+      .card:hover .cardContent a {
         opacity: 1;
         transform: translateY(0px);
         transition-delay: 0.75s;
@@ -176,21 +176,21 @@
           top: 15%;
         }
 
-        .card:hover .contentBx {
+        .card:hover .cardContent {
           height: 120px;
         }
 
-        .card .contentBx h2 {
+        .card .cardContent h2 {
           font-size: 1.2rem;
           margin-bottom: 5px;
         }
 
-        .card .contentBx .size h3 {
+        .card .cardContent .description h3 {
           font-size: 0.8rem;
           margin-bottom: 10px;
         }
 
-        .card .contentBx a {
+        .card .cardContent a {
           padding: 7px 15px;
           font-size: 0.8rem;
         }

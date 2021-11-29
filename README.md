@@ -37,6 +37,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 - Page capital de giro
 - Image background
+- Generate cards dinamic
 - Cards aligment on home in large screens
 - Readme
 - Favicon

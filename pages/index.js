@@ -20,36 +20,36 @@ export default function Home() {
         <section className={styles.content}>
           <div className={styles.resources}>
             <div className={styles.card}>
-              <div class={styles.contentBx}>
+              <div className={styles.cardContent}>
                 <h2>Calcule</h2>
-                <div class={styles.size}>
+                <div className={styles.description}>
                   <h3>o Capital de Giro que a sua empresa precisa</h3>
                 </div>
                 <a href="/capital-de-giro">Clique aqui</a>
               </div>
             </div>
             <div className={`${styles.card} ${styles.yellow}`}>
-              <div class={styles.contentBx}>
+              <div className={styles.cardContent}>
                 <h2>Descubra</h2>
-                <div class={styles.size}>
+                <div className={styles.description}>
                   <h3>o valor necessário para o 13 dos funcionários</h3>
                 </div>
                 <a href="/capital-de-giro">Clique aqui</a>
               </div>
             </div>
             <div className={`${styles.card} ${styles.blue}`}>
-              <div class={styles.contentBx}>
+              <div className={styles.cardContent}>
                 <h2>Compre</h2>
-                <div class={styles.size}>
+                <div className={styles.description}>
                   <h3>equipamentos e mão de obra</h3>
                 </div>
                 <a href="/capital-de-giro">Clique aqui</a>
               </div>
             </div>
             <div className={`${styles.card} ${styles.white}`}>
-              <div class={styles.contentBx}>
+              <div className={styles.cardContent}>
                 <h2>Invista</h2>
-                <div class={styles.size}>
+                <div className={styles.description}>
                   <h3>hoje para alcancar o lucro amanhã</h3>
                 </div>
                 <a href="/capital-de-giro">Clique aqui</a>
