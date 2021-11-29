@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "../styles/Home.module.scss";
 import home from "../public/home.jpeg";
 
@@ -25,7 +26,9 @@ export default function Home() {
                 <div className={styles.description}>
                   <h3>o Capital de Giro que a sua empresa precisa</h3>
                 </div>
-                <a href="/capital-de-giro">Clique aqui</a>
+                <Link href="/capital-de-giro">
+                  <a>Clique aqui</a>
+                </Link>
               </div>
             </div>
             <div className={`${styles.card} ${styles.yellow}`}>
@@ -34,7 +37,9 @@ export default function Home() {
                 <div className={styles.description}>
                   <h3>o valor necessário para o 13 dos funcionários</h3>
                 </div>
-                <a href="/capital-de-giro">Clique aqui</a>
+                <Link href="/capital-de-giro">
+                  <a>Clique aqui</a>
+                </Link>
               </div>
             </div>
             <div className={`${styles.card} ${styles.blue}`}>
@@ -43,7 +48,9 @@ export default function Home() {
                 <div className={styles.description}>
                   <h3>equipamentos e mão de obra</h3>
                 </div>
-                <a href="/capital-de-giro">Clique aqui</a>
+                <Link href="/capital-de-giro">
+                  <a>Clique aqui</a>
+                </Link>
               </div>
             </div>
             <div className={`${styles.card} ${styles.white}`}>
@@ -52,7 +59,9 @@ export default function Home() {
                 <div className={styles.description}>
                   <h3>hoje para alcancar o lucro amanhã</h3>
                 </div>
-                <a href="/capital-de-giro">Clique aqui</a>
+                <Link href="/capital-de-giro">
+                  <a>Clique aqui</a>
+                </Link>
               </div>
             </div>
           </div>
