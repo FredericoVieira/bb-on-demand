@@ -1,0 +1,200 @@
+@import "./_variables.scss";
+
+.main {
+  background-color: $background-color;
+
+  .title {
+    height: 50vh;
+    position: relative;
+  }
+
+  .content {
+    min-height: 50vh;
+    padding: 40px 60px;
+
+    .resources {
+      width: 100%;
+      display: grid;
+      justify-items: center;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-row-gap: 60px;
+
+      .card {
+        position: relative;
+        width: 250px;
+        height: 300px;
+        background: #232323;
+        border-radius: 20px;
+        overflow: hidden;
+      }
+
+      .card:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $primary-color;
+        clip-path: circle(100px at 92% 8%);
+        transition: 0.5s ease-in-out;
+      }
+
+      .card.yellow:before {
+        background: $terciary-color;
+      }
+
+      .card.blue:before {
+        background: $secondary-color;
+      }
+
+      .card.white:before {
+        background: $white-color;
+      }
+
+      .card:hover:before {
+        clip-path: circle(200px at 110% -20%);
+      }
+
+      .card:after {
+        content: "Calcule";
+        position: absolute;
+        top: 40%;
+        left: -9%;
+        font-size: 6em;
+        font-weight: 800;
+        font-style: italic;
+        color: rgba(255, 255, 25, 0.05);
+      }
+
+      .card.yellow:after {
+        content: "Descubra";
+        color: rgba(249, 250, 48, 0.05);
+      }
+
+      .card.blue:after {
+        content: "Compre";
+        color: rgba(34, 86, 156, 0.15);
+      }
+
+      .card.white:after {
+        content: "Invista";
+        color: rgba(255, 255, 255, 0.05);
+      }
+
+      .card .contentBx {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100px;
+        text-align: center;
+        transition: 1s;
+        z-index: 10;
+      }
+
+      .card:hover .contentBx {
+        height: 160px;
+      }
+
+      .card .contentBx h2 {
+        position: relative;
+        font-weight: 600;
+        letter-spacing: 1px;
+        color: #fff;
+        margin-bottom: 10px;
+      }
+
+      .card .contentBx .size {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 20px;
+        transition: 0.5s;
+        opacity: 0;
+        visibility: hidden;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      .card:hover .contentBx .size {
+        opacity: 1;
+        visibility: visible;
+        transition-delay: 0.5s;
+      }
+
+      .card .contentBx .size h3 {
+        color: #fff;
+        font-weight: 300;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+      }
+
+      .card .contentBx a {
+        display: inline-block;
+        padding: 10px 20px;
+        background: #fff;
+        border-radius: 4px;
+        margin-top: 10px;
+        text-decoration: none;
+        font-weight: 600;
+        color: #111;
+        opacity: 0;
+        transform: translateY(50px);
+        transition: 0.5s;
+        margin-top: 0;
+      }
+
+      .card:hover .contentBx a {
+        opacity: 1;
+        transform: translateY(0px);
+        transition-delay: 0.75s;
+      }
+    }
+  }
+
+  @media only screen and (max-device-width: 640px) {
+    .content {
+      padding: 20px 30px;
+
+      .resources {
+        .card {
+          width: 250px;
+          height: 150px;
+        }
+
+        .card:before {
+          clip-path: circle(50px at 100% 0%);
+        }
+
+        .card:hover:before {
+          clip-path: circle(100px at 110% -20%);
+        }
+
+        .card:after {
+          top: 15%;
+        }
+
+        .card:hover .contentBx {
+          height: 120px;
+        }
+
+        .card .contentBx h2 {
+          font-size: 1.2rem;
+          margin-bottom: 5px;
+        }
+
+        .card .contentBx .size h3 {
+          font-size: 0.8rem;
+          margin-bottom: 10px;
+        }
+
+        .card .contentBx a {
+          padding: 7px 15px;
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}
