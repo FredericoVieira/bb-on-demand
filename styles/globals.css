@@ -25,3 +25,32 @@ body::-webkit-scrollbar {
   width: 0;
   height: 0;
 }
+
+.button {
+  width: 315px;
+  height: 65px;
+  font-size: 21px;
+  background: linear-gradient(45deg, transparent 5%, #22569c 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  line-height: 65px;
+  text-transform: uppercase;
+  text-decoration: auto;
+  text-align: center;
+  box-shadow: 6px 0px 0px white;
+  outline: transparent;
+}
+
+@media only screen and (max-device-width: 640px) {
+  .button {
+    width: 250px;
+    height: 55px;
+    font-size: 18px;
+    line-height: 55px;
+  }
+}
+
+.button:hover {
+  cursor: pointer;
+}

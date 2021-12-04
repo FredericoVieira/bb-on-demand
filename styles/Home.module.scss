@@ -4,7 +4,7 @@
   background-color: $background-color;
 
   .header {
-    height: 100vh;
+    height: 62vh;
     position: relative;
 
     img {
@@ -39,7 +39,7 @@
   }
 
   .content {
-    min-height: 50vh;
+    height: 500px;
     padding: 40px 60px;
     display: flex;
     align-items: center;
@@ -55,7 +55,7 @@
         position: relative;
         width: 250px;
         height: 300px;
-        background: #232323;
+        background: $background-light-color;
         border-radius: 20px;
         overflow: hidden;
       }
@@ -114,7 +114,7 @@
       .card.white:after {
         content: "Invista";
         left: 0;
-        color: rgba(255, 255, 255, 0.05);
+        color: rgba(255, 255, 255, 0.1);
       }
 
       .card .cardContent {
@@ -189,6 +189,34 @@
     }
   }
 
+  .customerService {
+    height: 500px;
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $primary-color;
+    color: $secondary-color;
+
+    .hashtag {
+      font-size: 1rem;
+      text-transform: uppercase;
+      margin-bottom: 48px;
+    }
+
+    .title {
+      font-size: 3rem;
+      letter-spacing: 0.1rem;
+      font-weight: bold;
+      margin-bottom: 32px;
+    }
+
+    .description {
+      font-size: 1.5rem;
+      margin-bottom: 48px;
+    }
+  }
+
   @media only screen and (max-device-width: 640px) {
     .header {
       height: 50vh;
@@ -214,7 +242,8 @@
     }
 
     .content {
-      padding: 20px 30px;
+      height: 100%;
+      padding: 50px 30px;
 
       .resources {
         .card {
@@ -252,6 +281,31 @@
           padding: 7px 15px;
           font-size: 0.8rem;
         }
+      }
+    }
+
+    .customerService {
+      height: 100%;
+      padding: 50px 30px;
+      align-items: center;
+      text-align: center;
+
+      .hashtag {
+        font-size: 1rem;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+      }
+
+      .title {
+        font-size: 2rem;
+        letter-spacing: 0.1rem;
+        font-weight: bold;
+        margin-bottom: 24px;
+      }
+
+      .description {
+        font-size: 1.3rem;
+        margin-bottom: 32px;
       }
     }
   }
